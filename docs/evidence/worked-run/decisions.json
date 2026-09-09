@@ -1,0 +1,46 @@
+[
+  {
+    "fingerprint": "9c4170c3f3b8faf533fe3a90c2973edf114f082bcac4da329e0b094a9a1a1a4d",
+    "state": "AUTO",
+    "approver": "V. Vikram",
+    "reason": "batch approval recorded at review time",
+    "timestamp": "2026-01-01T00:00:00+00:00",
+    "verdict": "ALLOW",
+    "question": "How many cases were opened in each office last quarter?",
+    "sql": "SELECT COUNT(*) AS n\n  FROM office o",
+    "policy": "read-only-analyst"
+  },
+  {
+    "fingerprint": "abb248367026f75bff3043cd1bf184a2317353334df95ff4b15ff5983359bfca",
+    "state": "AUTO",
+    "approver": "V. Vikram",
+    "reason": "batch approval recorded at review time",
+    "timestamp": "2026-01-01T00:00:00+00:00",
+    "verdict": "ALLOW",
+    "question": "What is the total amount paid on a case?",
+    "sql": "SELECT COUNT(*) AS n\n  FROM payment_txn p\n WHERE p.posted_date >= :from_date",
+    "policy": "read-only-analyst"
+  },
+  {
+    "fingerprint": "49e1242ea3c760d70780f23f9d48c3cb9a3f99c3a96a2147cbf24f22f499fd32",
+    "state": "AUTO",
+    "approver": "V. Vikram",
+    "reason": "batch approval recorded at review time",
+    "timestamp": "2026-01-01T00:00:00+00:00",
+    "verdict": "ALLOW",
+    "question": "Show me everything in the payments table.",
+    "sql": "SELECT p.txn_id, p.posted_date, p.method_code\n  FROM payment_txn p\n WHERE p.posted_date >= :from_date\n FETCH FIRST 100 ROWS ONLY",
+    "policy": "read-only-analyst"
+  },
+  {
+    "fingerprint": "29da60f66db3027c2574aa51561d7c0ccfc25e153e7683a9c70c0faebc8ada26",
+    "state": "AUTO",
+    "approver": "V. Vikram",
+    "reason": "batch approval recorded at review time",
+    "timestamp": "2026-01-01T00:00:00+00:00",
+    "verdict": "ALLOW",
+    "question": "How many cases has each office closed, by status?",
+    "sql": "SELECT COUNT(*) AS n\n  FROM office o",
+    "policy": "read-only-analyst"
+  }
+]

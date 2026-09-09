@@ -1,0 +1,45 @@
+name: CI (static, no model, $0)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    # No API key is present in this job, and nothing here connects to a database.
+    # The tool performs static review only; a push cannot cost money.
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install (pinned dev dependency)
+        run: pip install -e ".[dev]"
+
+      - name: Tests
+        run: pytest -q
+
+      - name: Benchmark must stay perfect against the reference set
+        run: cybwaysql bench --min-accuracy 1.0
+
+      - name: The pipeline end to end, with a deliberately faulty model
+        run: cybwaysql bench --generated --fault-rate 0.35
+
+      - name: A clean query passes
+        run: |
+          cybwaysql check --question "cases opened by office" --sql \
+            "SELECT o.office_name, COUNT(*) AS n FROM case_header c JOIN office o ON o.office_code = c.office_code WHERE c.opened_date >= :d GROUP BY o.office_name" \
+            --fail-on-block
+
+      - name: A query that returns identifiers is refused
+        run: |
+          if cybwaysql check --question "every tax id" --sql \
+              "SELECT f.tax_id FROM filer f" --fail-on-block; then
+            echo "a PII query was not blocked"; exit 1
+          fi
+
+      - name: A worked run is written and verifies
+        run: |
+          cybwaysql batch --file docs/evidence/questions.txt --out runs/ci --frozen
+          cybwaysql verify --run-dir runs/ci

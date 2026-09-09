@@ -1,0 +1,39 @@
+{
+  "files": {
+    "audit.log.jsonl": "385d819733ac9c5ab34d2014d3bea797c5ddf4930612240e851609761f93abee",
+    "decisions.json": "09694b7b40e6307bb860e522a4e7ca262e1b969d12555c9dadcaf497d62c3f14",
+    "policy.json": "7588984d969adac1c382e239a520ca619e1957bf52d274be445150cb6c385b06",
+    "reviews.json": "a0b2592b981881f8e1fdbc3d4875239c9617649aaacd659c60896d10f8707832",
+    "summary.json": "edecca9c87f6a8771644c1dfd845e0ca0c8887dd581b1ffa181261acf51bf2c9",
+    "summary.txt": "74eeff4080dff35054e585cc411c8ce05e94908a61e850c3fee351f95d968c20"
+  },
+  "generated_at": "2026-01-01T00:00:00+00:00",
+  "manifest_sha256": "3fd9b751e95445575f024c065a74d3b8f8498068746c96dedcf1d5f6222dbfbd",
+  "summary": {
+    "blocked": 2,
+    "cost_usd": 0,
+    "gate": {
+      "approvers": [
+        "V. Vikram"
+      ],
+      "by_state": {
+        "AUTO": 4
+      },
+      "decisions": 4
+    },
+    "guards_fired": {
+      "GUARD-014": 1,
+      "GUARD-020": 1
+    },
+    "mode": "static review only, nothing was executed",
+    "needs_a_person": 0,
+    "policy": "read-only-analyst",
+    "provider": "mock",
+    "questions": 6,
+    "ran_without_comment": 4,
+    "verdicts": {
+      "ALLOW": 4,
+      "BLOCK": 2
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "read-only-analyst",
+  "description": "A person asking questions of a reporting replica. May read case and payment data in aggregate, may not read personal identifiers, and may not ask for more work than a replica can absorb.",
+  "read_only": true,
+  "allow_plsql": false,
+  "allow_set_operators": true,
+  "allowed_tables": [],
+  "denied_tables": [],
+  "allow_database_links": false,
+  "allow_unknown_objects": false,
+  "max_sensitivity": "RESTRICTED",
+  "denied_columns": [
+    "EXAMINER.EXAMINER_NAME",
+    "FILER.ADDRESS_LINE1",
+    "FILER.DATE_OF_BIRTH",
+    "FILER.DISPLAY_NAME",
+    "FILER.EMAIL",
+    "FILER.PHONE",
+    "FILER.TAX_ID",
+    "PAYMENT_TXN.ACCOUNT_LAST4"
+  ],
+  "allow_select_star": false,
+  "max_estimated_rows": 5000000,
+  "require_row_limit_above_rows": 1000000,
+  "require_where_above_rows": 1000000,
+  "max_tables_joined": 6,
+  "allow_cartesian": false,
+  "require_bind_variables": true,
+  "allow_hints": false,
+  "max_subquery_depth": 4,
+  "approval_required_above_rows": 2000000,
+  "approval_required_for_sensitivity": "RESTRICTED"
+}

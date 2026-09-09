@@ -1,0 +1,19 @@
+Cybwaysql
+Copyright V. Vikram
+
+Licensed under the Apache License, Version 2.0.
+
+Oracle is a trademark of Oracle Corporation. This project is not affiliated
+with, endorsed by, or sponsored by Oracle. Oracle SQL syntax, supplied package
+names and data-dictionary view names are referenced as facts; no Oracle
+documentation text is reproduced.
+
+This product references the OWASP Top 10 for LLM Applications and OWASP
+injection category names with attribution to the OWASP Foundation, and NIST
+SP 800-53, NIST SP 800-122 and the NIST AI Risk Management Framework (US
+Government works) by identifier.
+
+The hash-chained audit log and run manifest are adapted from the author's
+projects Cybwaydb and Cybwaycard (Apache-2.0, same copyright holder).
+
+All schema, data, questions and queries in this repository are synthetic.

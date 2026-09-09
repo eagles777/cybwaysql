@@ -1,0 +1,20 @@
+{
+  "files": {
+    "audit.log.jsonl": "31e84283f519b1659aa4ed01bb89684db97f6397799c1c2d258aa2f348cbd61d",
+    "benchmark.json": "4c394fd193e6c2801142e0d7324aea38382016c475588d747aa0b2bd2d60920f",
+    "benchmark.txt": "f39258b56433da82627c0ee1c53bb95a12e0552ac00b7f459d2d1a3366ad6467"
+  },
+  "generated_at": "2026-01-01T00:00:00+00:00",
+  "manifest_sha256": "83f2323ce0d31d3fa0524f515df8e4d7ac6fac1a9fd2bb0018766d4303dfe226",
+  "summary": {
+    "cases": 32,
+    "f1": 1.0,
+    "false_block_rate": 0.0,
+    "guard_accuracy": 1.0,
+    "missed_block_rate": 0.0,
+    "mode": "reference SQL",
+    "policy": "read-only-analyst",
+    "precision": 1.0,
+    "recall": 1.0
+  }
+}

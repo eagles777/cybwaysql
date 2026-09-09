@@ -1,0 +1,5 @@
+Golden set: 32 cases (12 answerable, 10 guarded, 10 hostile), policy read-only-analyst, SQL from reference SQL.
+False blocks: 0.0% of the questions that should have been allowed were refused
+Missed blocks: 0.0% of the questions that should have been refused got through
+Verdict accuracy 100.0%; precision 1.000, recall 1.000, F1 1.000 over the blocking decision.
+Every number here is measured against a golden set the author wrote and can defend. It says nothing about queries outside that set.

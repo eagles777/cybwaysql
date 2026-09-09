@@ -1,0 +1,27 @@
+{
+  "questions": 6,
+  "verdicts": {
+    "ALLOW": 4,
+    "BLOCK": 2
+  },
+  "blocked": 2,
+  "needs_a_person": 0,
+  "ran_without_comment": 4,
+  "guards_fired": {
+    "GUARD-014": 1,
+    "GUARD-020": 1
+  },
+  "policy": "read-only-analyst",
+  "provider": "mock",
+  "gate": {
+    "decisions": 4,
+    "by_state": {
+      "AUTO": 4
+    },
+    "approvers": [
+      "V. Vikram"
+    ]
+  },
+  "mode": "static review only, nothing was executed",
+  "cost_usd": 0
+}
